@@ -6,6 +6,6 @@ Nosso entregador está muito preocupado com a chuva nos últimos dias e precisad
 
 A aplicação deve possuir duas telas:
   - Uma tela inicial de pesquisa, com um campo para inserção da cidade na qual se deseja fazer a pesquisa;
-  - Uma tela de detalhes da previsão por cidade, que apresente osdetalhes retornados na requisição.
+  - Uma tela de detalhes da previsão por cidade, que apresente os detalhes retornados na requisição.
 
 A aplicação deve possuir uma solução totalmente nova;
