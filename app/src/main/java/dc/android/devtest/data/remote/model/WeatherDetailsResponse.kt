@@ -1,6 +1,8 @@
 package dc.android.devtest.data.remote.model
 
 import com.google.gson.annotations.SerializedName
+import dc.android.devtest.common.extension.toCalendar
+import dc.android.devtest.domain.model.WeatherDetails
 
 data class WeatherDetailsResponse(
     @SerializedName("city_name") val cityName: String,
@@ -28,3 +30,23 @@ data class Weather(
     @SerializedName("code") val code: Int,
     @SerializedName("description") val description: String,
 )
+
+fun WeatherDetailsResponse.toWeatherDetailsList(): List<WeatherDetails> = this.data.map {
+    WeatherDetails(
+        cityName = this.cityName,
+        timezone = this.timezone,
+        forecastDate = it.validDate.toCalendar(),
+        windSpeed = it.windSpeed,
+        windDirection = it.windDirection,
+        temperature = it.temperature,
+        maxTemp = it.maxTemp,
+        minTemp = it.minTemp,
+        apparentMaxTemp = it.apparentMaxTemp,
+        apparentMinTemp = it.apparentMinTemp,
+        precipitationPercentage = it.pop,
+        precipitationVolume = it.precip,
+        humidity = it.humidity,
+        weatherIcon = it.weather.icon,
+        weatherDescription = it.weather.description,
+    )
+}
