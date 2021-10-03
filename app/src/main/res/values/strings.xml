@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">devtest</string>
+
+    <string name="weather_icon_description">Weather Icon</string>
+
 </resources>

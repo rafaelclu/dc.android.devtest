@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/purple_200"
+    tools:context=".presentation.weather_detail.WeatherDetailsFragment">
+
+    <TextView
+        android:id="@+id/tvForecastDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="#311B92"
+        app:layout_constraintBottom_toTopOf="@id/tvCity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Previsão do dia 02/10/2021" />
+
+    <TextView
+        android:id="@+id/tvCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#5E35B1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ivWeatherIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvForecastDate"
+        tools:text="Londres" />
+
+    <TextView
+        android:id="@+id/tvTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#5E35B1"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/ivWeatherIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivWeatherIcon"
+        app:layout_constraintTop_toTopOf="@id/ivWeatherIcon"
+        tools:text="25°" />
+
+    <ImageView
+        android:id="@+id/ivWeatherIcon"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
+        android:contentDescription="@string/weather_icon_description"
+        android:src="@drawable/ic_image"
+        app:layout_constraintBottom_toTopOf="@id/tvWeatherDescription"
+        app:layout_constraintEnd_toStartOf="@id/tvTemperature"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCity" />
+
+    <TextView
+        android:id="@+id/tvWeatherDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#311B92"
+        app:layout_constraintBottom_toTopOf="@id/llDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivWeatherIcon"
+        tools:text="Chuva Fraca" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llDetails"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWeatherDescription">
+
+        <TextView
+            android:id="@+id/tvTimezone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#311B92"
+            app:layout_constraintBottom_toTopOf="@id/tvMinTemp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread"
+            tools:text="America/Recife" />
+
+        <TextView
+            android:id="@+id/tvMinTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#311B92"
+            app:layout_constraintBottom_toTopOf="@id/tvMaxTemp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTimezone"
+            tools:text="Temperatura Minima: 25°" />
+
+        <TextView
+            android:id="@+id/tvMaxTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#311B92"
+            app:layout_constraintBottom_toTopOf="@id/tvApparentTemp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMinTemp"
+            tools:text="Temperatura Maxima: 31°" />
+
+        <TextView
+            android:id="@+id/tvApparentTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#311B92"
+            app:layout_constraintBottom_toTopOf="@id/tvHumidity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMaxTemp"
+            tools:text="Sensação Térmica: 28° - 33°" />
+
+        <TextView
+            android:id="@+id/tvHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#311B92"
+            app:layout_constraintBottom_toTopOf="@id/tvWind"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvApparentTemp"
+            tools:text="Umidade: 47%" />
+
+        <TextView
+            android:id="@+id/tvWind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#311B92"
+            app:layout_constraintBottom_toTopOf="@id/tvPrecipitation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHumidity"
+            tools:text="Força do vento: 6.7 m/s - Sul" />
+
+        <TextView
+            android:id="@+id/tvPrecipitation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#311B92"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvWind"
+            tools:text="Precipitação: 31% - 4mm" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/progressBar"
+        layout="@layout/progress_bar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:textColor="#311B92"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

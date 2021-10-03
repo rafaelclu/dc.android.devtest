@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/weatherDetailsFragment">
 
+    <fragment
+        android:id="@+id/weatherDetailsFragment"
+        android:name="dc.android.devtest.presentation.weather_detail.WeatherDetailsFragment"
+        android:label="fragment_weather_details"
+        tools:layout="@layout/fragment_weather_details" >
+        <argument
+            android:name="cityId"
+            app:argType="string" />
+    </fragment>
 </navigation>
