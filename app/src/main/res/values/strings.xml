@@ -3,4 +3,20 @@
 
     <string name="weather_icon_description">Weather Icon</string>
 
+    <string name="date_pattern">yyyy-dd-MM</string>
+
+    <string name="forecast_day">Forecast for day %s</string>
+    <string name="min_temperature">Minimum Temperature: %s</string>
+    <string name="max_temperature">Maximum Temperature: %s</string>
+    <string name="apparent_temperature">Feels Like Temperature: %s</string>
+    <string name="humidity">Humidity: %s</string>
+    <string name="wind_speed">Wind Speed: %s</string>
+    <string name="precipitation">Precipitation: %s</string>
+
+    <!-- Errors messages -->
+    <string name="unknown_error">Unknown error. Please contact support</string>
+    <string name="socket_timeout_error">Connection error. Check your internet connection</string>
+    <string name="io_error">Error loading cities from json file.</string>
+    <string name="server_connection_error">Couldn\'t reach server. Check your internet connection</string>
+    <string name="internal_server_error">Server is offline. Please try again later</string>
 </resources>

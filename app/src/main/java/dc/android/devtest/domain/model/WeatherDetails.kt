@@ -1,5 +1,6 @@
 package dc.android.devtest.domain.model
 
+import dc.android.devtest.presentation.weather_detail.model.WeatherDetailsModel
 import java.util.*
 
 data class WeatherDetails(
@@ -18,4 +19,19 @@ data class WeatherDetails(
     val humidity: Double,
     val weatherIcon: String,
     val weatherDescription: String,
+)
+
+fun WeatherDetails.toWeatherDetailsModel() = WeatherDetailsModel(
+    cityName = cityName,
+    timezone = timezone,
+    forecastDate = forecastDate,
+    temperature = "$temperature°C",
+    minTemp = "$minTemp°",
+    maxTemp = "$maxTemp°",
+    apparentTemp = "$apparentMinTemp° - $apparentMaxTemp°",
+    wind = "${String.format("%.2f", windSpeed)}m/s - $windDirection",
+    precipitation = "${precipitationVolume}mm - ${precipitationPercentage}%",
+    humidity = "${humidity}%",
+    weatherIcon = weatherIcon,
+    weatherDescription = weatherDescription
 )

@@ -18,3 +18,10 @@ fun String.toCalendar(): Calendar {
 
     return calendar
 }
+
+/**
+ * Converts a Date to a String giving a pattern.
+ *
+ */
+fun Date.formatToLocalizedDate(pattern: String): String =
+    SimpleDateFormat(pattern, Locale.getDefault()).format(this)
