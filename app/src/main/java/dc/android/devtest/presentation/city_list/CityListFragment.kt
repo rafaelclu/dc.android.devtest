@@ -6,6 +6,7 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
@@ -40,7 +41,8 @@ class CityListFragment : BindingFragment<FragmentCityListBinding>() {
     }
 
     private fun initAdapter() {
-        cityAdapter = CityListAdapter { id ->
+        cityAdapter = CityListAdapter { city ->
+            navigateToDetailsScreen(city.cityId)
         }
     }
 
@@ -95,6 +97,13 @@ class CityListFragment : BindingFragment<FragmentCityListBinding>() {
 
         viewModel.searchCities(
             cityName = binding.etSearch.text.toString()
+        )
+    }
+
+    private fun navigateToDetailsScreen(id: String) {
+        findNavController().navigate(
+            CityListFragmentDirections
+                .actionCityListFragmentToWeatherDetailsFragment(cityId = id)
         )
     }
 

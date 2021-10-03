@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.navArgs
 import androidx.viewbinding.ViewBinding
 import coil.load
 import com.google.android.material.snackbar.Snackbar
@@ -27,11 +28,13 @@ class WeatherDetailsFragment : BindingFragment<FragmentWeatherDetailsBinding>() 
 
     private val viewModel: WeatherDetailsViewModel by viewModels()
 
+    private val args: WeatherDetailsFragmentArgs by navArgs()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val currentLanguage = Locale.getDefault().language
-        viewModel.getWeather(cityId = "3384987", currentLanguage)
+        viewModel.getWeather(cityId = args.cityId, currentLanguage)
 
         setupObservables()
     }
