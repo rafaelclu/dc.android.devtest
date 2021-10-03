@@ -2,7 +2,7 @@
 <navigation xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/weatherDetailsFragment">
+    app:startDestination="@id/cityListFragment">
 
     <fragment
         android:id="@+id/weatherDetailsFragment"
@@ -12,5 +12,14 @@
         <argument
             android:name="cityId"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/cityListFragment"
+        android:name="dc.android.devtest.presentation.city_list.CityListFragment"
+        android:label="fragment_city_list"
+        tools:layout="@layout/fragment_city_list" >
+        <action
+            android:id="@+id/action_cityListFragment_to_weatherDetailsFragment"
+            app:destination="@id/weatherDetailsFragment" />
     </fragment>
 </navigation>

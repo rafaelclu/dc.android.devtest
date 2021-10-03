@@ -3,6 +3,9 @@
 
     <string name="weather_icon_description">Weather Icon</string>
 
+    <string name="search_hint">Search city</string>
+    <string name="search">Search</string>
+
     <string name="date_pattern">yyyy-dd-MM</string>
 
     <string name="forecast_day">Forecast for day %s</string>
