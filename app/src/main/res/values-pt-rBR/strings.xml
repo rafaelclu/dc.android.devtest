@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">devtest</string>
+    
+    <string name="weather_icon_description">Icone de tempo</string>
+
+    <string name="search_hint">Digite o nome da cidade</string>
+    <string name="search">Pesquisar</string>
+
+    <string name="date_pattern">dd/MM/yyyy</string>
+
+    <string name="forecast_day">Previsão do dia %s</string>
+    <string name="min_temperature">Temperatura Mínima: %s</string>
+    <string name="max_temperature">Temperatura Máxima: %s</string>
+    <string name="apparent_temperature">Sensação Térmica: %s</string>
+    <string name="humidity">Umidade: %s</string>
+    <string name="wind_speed">Força do vento: %s</string>
+    <string name="precipitation">Precipitação: %s</string>
+
+    <!-- Errors messages -->
+    <string name="unknown_error">Erro Desconhecido. Por favor contate o suporte</string>
+    <string name="socket_timeout_error">Erro na conexão. Verifique sua conexão com a internet</string>
+    <string name="io_error">Erro ao carregar as cidades pelo arquivo json.</string>
+    <string name="server_connection_error">Não foi possível alcançar o servidor. Verifique sua conexão com a internet</string>
+    <string name="internal_server_error">O servidor está offline. Por favor tente novamente mais tarde</string>
+</resources>
