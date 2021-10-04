@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">devtest</string>
-    
+
     <string name="weather_icon_description">Icone de tempo</string>
 
     <string name="search_hint">Digite o nome da cidade</string>
